@@ -20,3 +20,18 @@ if (!localStorage.getItem("theme")) {
 setTheme(event.matches ? "dark" : "light");
 }
 });
+
+// ---------- 2. Mobile menu (hamburger) ----------
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+menuBtn.addEventListener("click", function () {
+const isOpen = navLinks.classList.toggle("open");
+menuBtn.setAttribute("aria-expanded", String(isOpen));
+});
+// Close the menu after tapping a link
+navLinks.querySelectorAll("a").forEach(function (link) {
+link.addEventListener("click", function () {
+navLinks.classList.remove("open");
+menuBtn.setAttribute("aria-expanded", "false");
+});
+});
