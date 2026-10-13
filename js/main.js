@@ -33,5 +33,6 @@ navLinks.querySelectorAll("a").forEach(function (link) {
 link.addEventListener("click", function () {
 navLinks.classList.remove("open");
 menuBtn.setAttribute("aria-expanded", "false");
+
 });
 });
