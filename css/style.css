@@ -194,3 +194,15 @@ transition: transform 0.25s, box-shadow 0.25s;
 .tags li { font-size: 0.78rem; font-weight: 700; color: var(--muted); border: 1px solid var(--border);
 padding: 0.15rem 0.6rem; border-radius: 999px; }
 .project-links a { font-weight: 700; }
+/* contact */
+.contact-card {
+text-align: center; padding: 3rem 1.5rem; border-radius: 24px; color: #fff;
+background: var(--gradient); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.35);
+}
+.contact-card p { opacity: 0.92; }
+.contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top:
+1.5rem; }
+.contact-card .btn-primary { background: #fff; color: #4338ca; box-shadow: none; }
+.contact-card .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
+.contact-card .btn-ghost:hover { color: #fff; border-color: #fff; }
+
