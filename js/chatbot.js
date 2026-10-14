@@ -58,7 +58,7 @@ keywords: ["thank", "thanks", "salamat", "ty",],
 answer: "You're welcome! 😊 Anything else you'd like to know?"
 }
 };
-const fallback = "ewan ko""
+const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
 
 // ---------- 3. Find the best rule-based reply ----------
 // Each topic gets a score = how many of its keywords appear. Highest score wins.
