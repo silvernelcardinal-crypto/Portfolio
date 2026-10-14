@@ -4,7 +4,7 @@
 // school ID, passwords, or API keys.
 const profile = {
 name: "Silvernel Cardinal", // EXAMPLE ONLY — change to your name
-shortName: "Silver",
+shortName: "Silver", // for short replies like "Hi, I'm Silver!"
 role: "Grade 12 student & aspiring web developer",
 location: "Philippines",
 about:
@@ -43,11 +43,11 @@ description: "Small exercises on variables, objects, functions, and DOM events."
 tech: ["JavaScript"]
 }
 ],
-hobbies: ["watching movies/anime", "mobile games", "playing basketball"],
+hobbies: ["watching anime", "mobile games", "playing basketball"],
 goals: "I want to take up Computer Science in college and become a full-stack developer.",
 ojt: "Work immersion intern (developer) with a software & AI dev team, Oct 12–30, 2026.",
 contact: {
-email: "silvernelcardinal@example.com", // use a school/public email only
+email: "silvernelcardinal@gmail.com", // use a school/public email only
 github: "https://github.com/silvernelcardinal-crypto"
 }
 };
