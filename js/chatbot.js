@@ -84,3 +84,21 @@ bestTopic = topic;
 }
 return bestTopic ? qa[bestTopic].answer : fallback;
 }
+
+// ---------- 4. Ask the AI (our own server — the API key is NOT in this file!) ----------
+let aiAvailable = USE_AI;
+async function getAIReply(userText) {
+const response = await fetch("/api/chat", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({ message: userText }),
+signal: AbortSignal.timeout(20000)
+});
+// 404/405 = no server function (e.g. Live Server); 500 = key not set up yet.
+// Stop trying the AI for this visit. 429 (busy) = just use the backup this time.
+if ([404, 405, 500, 501].includes(response.status)) aiAvailable = false;
+if (!response.ok) throw new Error("API error " + response.status);
+const data = await response.json();
+if (!data.reply) throw new Error("Empty reply");
+return data.reply;
+}
