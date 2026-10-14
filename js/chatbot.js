@@ -54,12 +54,12 @@ keywords: ["contact", "email", "reach", "github", "message", "hire"],
 answer: `You can email ${profile.contact.email} or check GitHub: ${profile.contact.github}`
 },
 thanks: {
-keywords: ["thank", "thanks", "salamat", "ty"],
+keywords: ["thank", "thanks", "salamat", "ty",],
 answer: "You're welcome! 😊 Anything else you'd like to know?"
 },
-hobbies: {
-keywords: ["pogi ba si silver", "cute ba si silver"],
-answer: "Of course! silver is handsome😎"
+pogi: {
+keywords: ["pogi", "handsome", "gwapo", "cute"],
+answer: "Of course! 😎"
 }
 };
 const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
