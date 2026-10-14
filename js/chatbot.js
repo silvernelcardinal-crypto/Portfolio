@@ -101,3 +101,86 @@ const data = await response.json();
 if (!data.reply) throw new Error("Empty reply");
 return data.reply;
 }
+
+// ---------- 5. Chat UI ----------
+const launcher = document.getElementById("chat-launcher");
+const panel = document.getElementById("chat-panel");
+const closeBtn = document.getElementById("chat-close");
+const form = document.getElementById("chat-form");
+const input = document.getElementById("chat-input");
+const sendBtn = document.getElementById("chat-send");
+const messages = document.getElementById("chat-messages");
+const modeLabel = document.getElementById("chat-mode");
+let greeted = false;
+function addMessage(text, sender) {
+const li = document.createElement("li");
+li.classList.add("message", sender);
+li.textContent = text; // textContent = safe (no HTML injection)
+messages.appendChild(li);
+messages.scrollTop = messages.scrollHeight;
+return li;
+}
+function showTyping() {
+const li = document.createElement("li");
+li.className = "message bot typing";
+li.setAttribute("aria-label", "Typing");
+li.innerHTML = "<span></span><span></span><span></span>";
+messages.appendChild(li);
+messages.scrollTop = messages.scrollHeight;
+return li;
+}
+function setMode(text) { modeLabel.textContent = text; }
+function openChat() {
+panel.hidden = false;
+launcher.setAttribute("aria-expanded", "true");
+launcher.setAttribute("aria-label", "Close chat");
+if (!greeted) {
+addMessage(qa.greeting.answer, "bot");
+greeted = true;
+}
+input.focus();
+}
+function closeChat() {
+panel.hidden = true;
+launcher.setAttribute("aria-expanded", "false");
+launcher.setAttribute("aria-label", "Open chat");
+launcher.focus();
+}
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+async function handleQuestion(userText) {
+userText = userText.trim();
+if (userText === "") return; // ignore empty messages
+addMessage(userText, "user");
+input.value = "";
+sendBtn.disabled = true;
+const typing = showTyping();
+let reply;
+if (aiAvailable) {
+try {
+reply = await getAIReply(userText);
+setMode("✨ AI mode");
+} catch (error) {
+console.log("AI unavailable, using rule-based bot:", error.message);
+}
+}
+if (!reply) {
+await wait(500); // small pause so it feels natural
+reply = getReply(userText);
+setMode("⚡ Basic mode");
+}
+typing.remove();
+addMessage(reply, "bot");
+sendBtn.disabled = false;
+input.focus();
+}
+launcher.addEventListener("click", () => (panel.hidden ? openChat() : closeChat()));
+closeBtn.addEventListener("click", closeChat);
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !panel.hidden) closeChat(); });
+document.querySelectorAll("[data-open-chat]").forEach(btn => btn.addEventListener("click", openChat));
+form.addEventListener("submit", function (event) {
+event.preventDefault(); // stop the page from reloading
+handleQuestion(input.value);
+});
+document.querySelectorAll("#quick-replies button").forEach(function (btn) {
+btn.addEventListener("click", () => handleQuestion(btn.dataset.question));
+});
