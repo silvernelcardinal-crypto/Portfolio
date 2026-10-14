@@ -60,3 +60,27 @@ answer: "You're welcome! 😊 Anything else you'd like to know?"
 };
 const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or
 how to contact me!";
+
+// ---------- 3. Find the best rule-based reply ----------
+// Each topic gets a score = how many of its keywords appear. Highest score wins.
+function getReply(userText) {
+const text = userText.toLowerCase();
+const words = text.split(/[^a-z0-9-]+/); // "What's your skill?" → ["what","s","your","skill",""]
+let bestTopic = null;
+let bestScore = 0;
+for (const topic in qa) {
+let score = 0;
+for (const keyword of qa[topic].keywords) {
+const found = keyword.includes(" ")
+? text.includes(keyword) // phrase: "good at"
+: words.some(w => w === keyword || (keyword.length >= 4 && w.startsWith(keyword))); // "skill" →
+"skills"
+if (found) score++;
+}
+if (score > bestScore) {
+bestScore = score;
+bestTopic = topic;
+}
+}
+return bestTopic ? qa[bestTopic].answer : fallback;
+}
