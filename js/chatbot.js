@@ -15,7 +15,7 @@ return items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
 const qa = {
 greeting: {
 keywords: ["hello", "hi", "hey", "kumusta", "musta", "good morning", "good afternoon"],
-answer: `Hi! 👋 I'm ${profile.shortName}'s assistant. Ask me about skills, education, projects, or
+answer: `Hi! 👋 I'm ${profile.Silver}'s assistant. Ask me about skills, education, projects, or
 contact info.`
 },
 about: {
@@ -24,7 +24,7 @@ answer: profile.about
 },
 skills: {
 keywords: ["skill", "good at", "know", "html", "css", "javascript", "language", "tech", "galing"],
-answer: `${profile.shortName} works with ${list(profile.skills)}, and is currently learning
+answer: `${profile.Silver} works with ${list(profile.skills)}, and is currently learning
 ${list(profile.learning)}.`
 },
 education: {
@@ -39,7 +39,7 @@ ${p.description}`).join("\n")
 },
 hobbies: {
 keywords: ["hobby", "hobbies", "free time", "fun", "like to do", "libangan"],
-answer: `In free time, ${profile.shortName} enjoys ${list(profile.hobbies)}.`
+answer: `In free time, ${profile.Silver} enjoys ${list(profile.hobbies)}.`
 },
 goals: {
 keywords: ["goal", "dream", "future", "career", "plan", "pangarap"],
