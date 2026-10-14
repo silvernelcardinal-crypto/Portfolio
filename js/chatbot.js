@@ -51,6 +51,7 @@ answer: profile.ojt
 contact: {
 keywords: ["contact", "email", "reach", "github", "message", "hire"],
 answer: `You can email ${profile.contact.email} or check GitHub: ${profile.contact.github}`
+📄 js/chatbot.js · Step 5.3
 },
 thanks: {
 keywords: ["thank", "thanks", "salamat", "ty"],
