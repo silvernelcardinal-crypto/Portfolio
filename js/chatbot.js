@@ -56,6 +56,10 @@ answer: `You can email ${profile.contact.email} or check GitHub: ${profile.conta
 thanks: {
 keywords: ["thank", "thanks", "salamat", "ty"],
 answer: "You're welcome! 😊 Anything else you'd like to know?"
+},
+hobbies: {
+keywords: ["pogi ba si silver", "cute ba si silver"],
+answer: "Of course! silver is handsome😎"
 }
 };
 const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
