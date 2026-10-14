@@ -123,8 +123,7 @@ return li;
 function showTyping() {
 const li = document.createElement("li");
 li.className = "message bot typing";
-li.setAttribute("aria-label", "Typing");
-li.innerHTML = "<span></span><span></span><span></span>";
+li.setAttribute("aria-label", "Typing");li.innerHTML = "<span></span><span></span><span></span>";
 messages.appendChild(li);
 messages.scrollTop = messages.scrollHeight;
 return li;
