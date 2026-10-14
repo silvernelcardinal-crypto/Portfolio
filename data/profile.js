@@ -3,8 +3,8 @@
 // ⚠️ This file is PUBLIC. Never add your home address, phone number, birthday,
 // school ID, passwords, or API keys.
 const profile = {
-name: "Juan Dela Cruz", // EXAMPLE ONLY — change to your name
-shortName: "Juan",
+name: "Silvernel Cardinal", // EXAMPLE ONLY — change to your name
+shortName: "Silver",
 role: "Grade 12 student & aspiring web developer",
 location: "Philippines",
 about:
@@ -13,13 +13,13 @@ about:
 education: [
 {
 level: "Senior High School — ICT Strand",
-school: "Sample Senior High School",
+school: "Eclaro Academy Senior High School",
 years: "2025 – 2027",
 details: "Grade 12. Favorite subjects: programming and web design."
 },
 {
 level: "Junior High School",
-school: "Sample National High School",
+school: "Holy Spirit National High School",
 years: "2021 – 2025",
 details: "Joined the computer club and helped make the school event page."
 }
@@ -43,12 +43,12 @@ description: "Small exercises on variables, objects, functions, and DOM events."
 tech: ["JavaScript"]
 }
 ],
-hobbies: ["drawing", "mobile games", "playing basketball"],
+hobbies: ["watching movies/anime", "mobile games", "playing basketball"],
 goals: "I want to take up Computer Science in college and become a full-stack developer.",
 ojt: "Work immersion intern (developer) with a software & AI dev team, Oct 12–30, 2026.",
 contact: {
-email: "juan.delacruz@example.com", // use a school/public email only
-github: "https://github.com/your-username"
+email: "silvernelcardinal@example.com", // use a school/public email only
+github: "https://github.com/silvernelcardinal-crypto"
 }
 };
 export default profile;
