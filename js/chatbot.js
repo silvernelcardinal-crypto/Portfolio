@@ -59,7 +59,7 @@ answer: "You're welcome! 😊 Anything else you'd like to know?"
 },
 pogi: {
 keywords: ["pogi", "handsome", "gwapo", "cute"],
-answer: "Of course! 😎 But don't forget to be kind to everyone!"
+answer: "syempre, hindi"
 }
 };
 const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
