@@ -5,9 +5,9 @@ Portfolio Starter — style.css
 ========================================================= */
 /* ---------- 1. Theme variables ---------- */
 :root {
---accent: #6366f1; /* main color (indigo) */
---accent-2: #837c7f; /* second color for gradients (pink) */
---accent-3: #06b6d4; /* third color (cyan) */
+--accent: #ee1010; /* main color (indigo) */
+--accent-2: #b2adaf; /* second color for gradients (pink) */
+--accent-3: #23d9f9; /* third color (cyan) */
 --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
 --bg: #f8fafc;
 --bg-alt: #eef2ff;
