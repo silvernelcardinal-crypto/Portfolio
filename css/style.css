@@ -211,9 +211,9 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: v
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
 .footer p { margin: 0; }
 [data-theme="dark"] {
---accent: #5c2168; /* main color (indigo) */;
---accent-2: #15137d;
---accent-3: #22d3ee;
+--accent: #fa281d; /* main color (indigo) */;
+--accent-2: #100f5f;
+--accent-3: #343838;
 --bg: #0b1020;
 --bg-alt: #111833;
 --surface: #151c34;
