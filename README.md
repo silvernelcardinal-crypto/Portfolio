@@ -1,7 +1,7 @@
 # Portfolio Starter (HTML · CSS · JavaScript + Chatbot)
 A modern, responsive personal portfolio with a floating chatbot.
 The sample content is for a fictional student, **Silvernel CArdinal**. Replace it with your own.
-**Live site:** https://<your-project>.vercel.app ← ✏️ update after deploying
+**Live site:** https://portfolio-iota-plum-71.vercel.app/ ← ✏️ update after deploying
 ## Features
 - Sticky navbar, mobile hamburger menu, smooth scrolling, active-link highlight
 - Hero with gradient accents, About, Skills chips, Education timeline, Project cards, Contact, Footer
