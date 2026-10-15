@@ -211,7 +211,7 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: v
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
 .footer p { margin: 0; }
 [data-theme="dark"] {
---accent: #241dfa; /* main color (indigo) */;
+--accent: #fa1d1d; /* main color (indigo) */;
 --accent-2: #100f5f;
 --accent-3: #343838;
 --bg: #0b1020;
