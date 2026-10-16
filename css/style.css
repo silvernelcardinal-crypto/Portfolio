@@ -327,3 +327,14 @@ box-shadow: var(--shadow); display: none;
 !important; }
 .reveal { opacity: 1; transform: none; }
 }
+
+
+/* ---------- 11. Profile photo ---------- */
+.avatar-photo {
+height: auto; /* keep it a perfect circle */
+object-fit: cover; /* fill the circle without stretching the photo */
+border-radius: 50%;
+border: 4px solid var(--surface); /* gap before the ring: matches light/dark theme */
+}
+
+.logo-photo { object-fit: cover; } /* navbar photo: no stretching */
