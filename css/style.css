@@ -224,7 +224,7 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: v
 --nav-bg: rgba(11, 16, 32, 0.75);
 --chip-bg: #1e2748;
 --chip-text: #c7d2fe;
---bot-bubble: #1e2748;
+--bot-bubble: #1e2748;  
 --glow-1: rgba(129, 140, 248, 0.32);
 --glow-2: rgba(244, 114, 182, 0.20);
 }
