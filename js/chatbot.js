@@ -58,8 +58,12 @@ keywords: ["thank", "thanks", "salamat", "ty",],
 answer: "You're welcome! 😊 Anything else you'd like to know?"
 },
 pogi: {
-keywords: ["pogi", "handsome", "gwapo", "cute"],
+keywords: ["pogi", "handsome", "gwapo"],
 answer: "syempre, hindi"
+},
+maganda: {
+keywords: ["maganda", "beautiful", "ganda", "pretty", "cute"],
+answer: "tinatanong paba yan? syempre, oo"
 }
 };
 const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
