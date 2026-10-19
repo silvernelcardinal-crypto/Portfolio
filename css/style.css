@@ -212,7 +212,7 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: v
 .footer p { margin: 0; }
 [data-theme="dark"] {
 --accent: #fa1d1d; /* main color (indigo) */;
---accent-2: #3b1111;
+--accent-2: #270c0c;
 --accent-3: #6f1c1c;
 --bg: #0b1020;
 --bg-alt: #0b1020;
