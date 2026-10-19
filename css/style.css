@@ -20,8 +20,8 @@ Portfolio Starter — style.css
 --chip-bg: #eef2ff;
 --chip-text: #4338ca;
 --bot-bubble: #f1f5f9;
---glow-1: rgba(99, 102, 241, 0.30);
---glow-2: rgba(236, 72, 153, 0.20);
+--glow-1: rgba(231, 16, 16, 0.701);
+--glow-2: rgba(239, 13, 13, 0.596);
 --radius: 16px;
 --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 --max: 1100px;
@@ -212,10 +212,10 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: v
 .footer p { margin: 0; }
 [data-theme="dark"] {
 --accent: #fa1d1d; /* main color (indigo) */;
---accent-2: #0a0a0a;
+--accent-2: #3b1111;
 --accent-3: #6f1c1c;
 --bg: #0b1020;
---bg-alt: #111833;
+--bg-alt: #0b1020;
 --surface: #151c34;
 --text: #e2e8f0;
 --muted: #94a3b8;
@@ -225,8 +225,8 @@ footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: v
 --chip-bg: #1e2748;
 --chip-text: #c7d2fe;
 --bot-bubble: #1e2748;  
---glow-1: rgba(129, 140, 248, 0.32);
---glow-2: rgba(244, 114, 182, 0.20);
+--glow-1: rgba(214, 17, 17, 0.574);
+--glow-2: rgba(229, 34, 34, 0.726);
 }
 /* ---------- 7. Scroll-reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
