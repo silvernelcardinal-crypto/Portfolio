@@ -47,7 +47,12 @@ answer: profile.goals
 },
 ojt: {
 keywords: ["ojt", "intern", "immersion", "company", "team"],
-answer: profile.ojt
+answer: profile.ojt + "\n\n📓 " + profile.ojtJournal.summary
+},
+journal: {
+keywords: ["journal", "log", "daily log", "ojt journal", "notes", "entry", "entries", "read journal"],
+answer: `📓 ${profile.ojtJournal.summary}\n\n👉 Read the journal: ${profile.ojtJournal.page}\n` +
+`💻 GitHub repo: ${profile.ojtJournal.repo}`
 },
 contact: {
 keywords: ["contact", "email", "reach", "github", "message", "hire"],
@@ -66,7 +71,7 @@ keywords: ["maganda", "beautiful", "ganda", "pretty", "cute"],
 answer: "tinatanong paba yan? syempre, oo"
 }
 };
-const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, or how to contact me!";
+const fallback = "Hmm, I'm not sure about that yet 🤔. Try asking about my skills, education, projects, my OJT journal, or how to contact me!";
 
 // ---------- 3. Find the best rule-based reply ----------
 // Each topic gets a score = how many of its keywords appear. Highest score wins.

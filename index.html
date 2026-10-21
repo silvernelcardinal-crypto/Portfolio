@@ -30,6 +30,7 @@ width="36" height="36"><span>Silver<span class="accent">.dev</span></span></a>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="ojt.html#journal">OJT Journal</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 <div class="nav-actions">
@@ -178,6 +179,7 @@ optional AI upgrade.</p>
 <p>My daily work immersion logs, tracked with Git and pushed to GitHub every day.</p>
 <ul class="tags"><li>Git</li><li>Markdown</li></ul>
 <div class="project-links">
+<a href="ojt.html#journal">Read the journal →</a>
 <a href="https://github.com/silvernelcardinal-crypto/ojt-journal" target="_blank" rel="noopener">Code
 ↗</a>
 </div>
@@ -187,14 +189,29 @@ optional AI upgrade.</p>
 <div class="project-thumb t3" aria-hidden="true">⚡</div>
 <div class="project-body">
 <h3>JavaScript Practice</h3>
-<p>Small exercises on variables, objects, functions, and DOM events.</p>
+<p>My JavaScript practice — variables, functions, DOM events, and the chatbot logic behind this site.</p>
 <ul class="tags"><li>JavaScript</li></ul>
 <div class="project-links">
-<a href="https://github.com/silvernelcardinal-crypto/javascript-practice" target="_blank" rel="noopener">Code
+<a href="https://github.com/silvernelcardinal-crypto/Portfolio/tree/main/js" target="_blank" rel="noopener">Code
 ↗</a>
 </div>
 </div>
 </article>
+</div>
+</div>
+</section>
+<!-- ================= OJT JOURNAL ================= -->
+<section class="section" id="journal">
+<div class="container">
+<p class="section-kicker reveal">Work immersion</p>
+<h2 class="section-title reveal">My OJT Journal</h2>
+<p class="muted reveal">A daily log of my work immersion — what I did, what I learned, and the tools I used.
+One entry per day, committed to Git and pushed to GitHub.</p>
+<div class="ojt-preview reveal" id="ojt-preview"></div>
+<div class="hero-cta reveal">
+<a href="ojt.html#journal" class="btn btn-primary">📓 Read the full journal</a>
+<a href="https://github.com/silvernelcardinal-crypto/ojt-journal" class="btn btn-ghost" target="_blank"
+rel="noopener">GitHub repo ↗</a>
 </div>
 </div>
 </section>
@@ -249,6 +266,7 @@ aria-expanded="false" aria-controls="chat-panel">
 <button type="button" data-question="What are your skills?">Skills</button>
 <button type="button" data-question="Where do you study?">Education</button>
 <button type="button" data-question="What projects have you made?">Projects</button>
+<button type="button" data-question="Show me your OJT journal">OJT Journal</button>
 <button type="button" data-question="How can I contact you?">Contact</button>
 </div>
 <form class="chat-form" id="chat-form" autocomplete="off">
@@ -260,6 +278,7 @@ message">
 
 <script src="js/main.js" defer></script>
 <script type="module" src="js/chatbot.js"></script>
+<script type="module" src="js/ojt.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OJT Journal | Silvernel Cardinal</title>
+<meta name="description" content="Daily work immersion journal of Silvernel Cardinal — what I did, what I learned, and the tools I used every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/favicon.png?v=3" sizes="32x32">
+<link rel="icon" type="image/png" href="images/apple-touch-icon.png?v=3" sizes="180x180">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=3">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+<nav class="container nav-inner" aria-label="Main">
+<a href="index.html" class="logo"><img class="logo-badge logo-photo" src="images/profile.jpg" alt=""
+width="36" height="36"><span>Silver<span class="accent">.dev</span></span></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html#about">About</a></li>
+<li><a href="index.html#skills">Skills</a></li>
+<li><a href="index.html#education">Education</a></li>
+<li><a href="index.html#projects">Projects</a></li>
+<li><a href="ojt.html#journal" class="active">OJT Journal</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+<div class="nav-actions">
+<button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch color theme">
+<span class="icon-sun" aria-hidden="true">☀️</span>
+<span class="icon-moon" aria-hidden="true">🌙</span>
+</button>
+<button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu"
+aria-expanded="false" aria-controls="nav-links">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+</header>
+
+<main id="main">
+<!-- ================= JOURNAL HEADER ================= -->
+<section class="ojt-hero">
+<div class="hero-bg" aria-hidden="true"></div>
+<div class="container ojt-hero-inner">
+<p class="eyebrow reveal">📓 Work immersion log</p>
+<h1 class="reveal">OJT <span class="gradient-text">Journal</span></h1>
+<p class="ojt-meta reveal" id="ojt-meta"></p>
+<p class="tagline reveal" id="ojt-intro"></p>
+<div class="hero-cta reveal">
+<a href="index.html" class="btn btn-ghost">← Back to portfolio</a>
+<a href="#" class="btn btn-primary" data-ojt-repo target="_blank" rel="noopener">View on GitHub ↗</a>
+</div>
+<div class="ojt-stats reveal" id="ojt-stats"></div>
+</div>
+</section>
+
+<!-- ================= ENTRIES ================= -->
+<section class="section alt" id="journal">
+<div class="container">
+<p class="section-kicker reveal">Daily entries</p>
+<h2 class="section-title reveal">What I did and learned each day</h2>
+
+<div class="ojt-toolbar reveal">
+<div class="ojt-filters" id="ojt-filters" role="group" aria-label="Filter entries by week"></div>
+<label class="ojt-search-wrap">
+<span class="sr-only">Search entries</span>
+<input type="search" id="ojt-search" placeholder="🔎 Search entries (e.g. git, css, bug)" autocomplete="off">
+</label>
+</div>
+<p class="ojt-count" id="ojt-count" aria-live="polite"></p>
+
+<div class="ojt-entries" id="ojt-entries"></div>
+</div>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="section">
+<div class="container">
+<p class="section-kicker reveal">Summary</p>
+<h2 class="section-title reveal">Tools I used</h2>
+<ul class="tool-list reveal" id="ojt-tools"></ul>
+<div class="card ojt-note-card reveal">
+<h3>📌 Note</h3>
+<p id="ojt-note"></p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer-inner">
+<p>© <span id="year">2026</span> Silvernel Cardinal · Built with HTML, CSS &amp; JavaScript</p>
+<a href="index.html#home" class="back-top">Back to top ↑</a>
+</div>
+</footer>
+
+<!-- Set the theme BEFORE the page draws, so there's no white flash in dark mode -->
+<script>
+(function () {
+var saved = localStorage.getItem("theme");
+var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+})();
+</script>
+
+<!-- ================= CHATBOT WIDGET ================= -->
+<button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open chat"
+aria-expanded="false" aria-controls="chat-panel">
+<span class="launcher-open" aria-hidden="true">💬</span>
+<span class="launcher-close" aria-hidden="true">✕</span>
+</button>
+<section class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat with Silver's bot" hidden>
+<header class="chat-header">
+<div class="chat-avatar" aria-hidden="true">🤖</div>
+<div>
+<p class="chat-title">Silver's Assistant</p>
+<p class="chat-status"><span class="dot"></span> <span id="chat-mode">Online</span></p>
+</div>
+<button class="icon-btn chat-close" id="chat-close" type="button" aria-label="Close chat">✕</button>
+</header>
+<ul class="chat-messages" id="chat-messages" aria-live="polite"></ul>
+<div class="quick-replies" id="quick-replies">
+<button type="button" data-question="What did you learn during your OJT?">OJT journal</button>
+<button type="button" data-question="What are your skills?">Skills</button>
+<button type="button" data-question="What projects have you made?">Projects</button>
+<button type="button" data-question="How can I contact you?">Contact</button>
+</div>
+<form class="chat-form" id="chat-form" autocomplete="off">
+<input id="chat-input" type="text" maxlength="500" placeholder="Ask me anything…" aria-label="Your
+message">
+<button type="submit" id="chat-send" aria-label="Send">➤</button>
+</form>
+</section>
+
+<script src="js/main.js" defer></script>
+<script type="module" src="js/chatbot.js"></script>
+<script type="module" src="js/ojt.js"></script>
+
+</body>
+</html>

@@ -39,13 +39,20 @@ tech: ["Git", "Markdown"]
 },
 {
 name: "JavaScript Practice",
-description: "Small exercises on variables, objects, functions, and DOM events.",
+description: "My JavaScript practice — variables, functions, DOM events, and the chatbot logic behind this site.",
 tech: ["JavaScript"]
 }
 ],
 hobbies: ["watching anime", "mobile games", "playing basketball"],
 goals: "I want to take up Computer Science in college and become a full-stack developer.",
 ojt: "Work immersion intern (developer) with a software & AI dev team, Oct 12–30, 2026.",
+ojtJournal: {
+page: "ojt.html",
+repo: "https://github.com/silvernelcardinal-crypto/ojt-journal",
+summary: "I keep a daily OJT journal — what I did, what I learned, and the tools I used. " +
+"It lives on my portfolio (ojt.html) and I push it to GitHub every day. " +
+"So far it covers Git and GitHub, HTML & CSS, JavaScript and the DOM, deployment, and the AI chatbot."
+},
 contact: {
 email: "silvernelcardinal@gmail.com", // use a school/public email only
 github: "https://github.com/silvernelcardinal-crypto"

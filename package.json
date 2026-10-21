@@ -2,5 +2,9 @@
 "name": "portfolio-starter",
 "private": true,
 "type": "module",
-"description": "Personal portfolio + chatbot (static site + one Vercel serverless function)"
+"description": "Personal portfolio + chatbot (static site + one Vercel serverless function)",
+"scripts": {
+"journal:sync": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-journal.ps1",
+"start": "npx serve ."
+}
 }

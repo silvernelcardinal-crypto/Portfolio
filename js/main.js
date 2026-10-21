@@ -46,14 +46,16 @@ navbar.classList.toggle("scrolled", window.scrollY > 10);
 const sections = document.querySelectorAll("main section[id]");
 const linkFor = {};
 navLinks.querySelectorAll("a").forEach(function (a) {
-linkFor[a.getAttribute("href").slice(1)] = a;
+const key = (a.getAttribute("href") || "").split("#")[1];
+if (key) linkFor[key] = a;
 });
 const sectionObserver = new IntersectionObserver(function (entries) {
 entries.forEach(function (entry) {
 if (!entry.isIntersecting) return;
-Object.values(linkFor).forEach(function (l) { l.classList.remove("active"); });
 const link = linkFor[entry.target.id]; // the hero has no link, so nothing is highlighted there
-if (link) link.classList.add("active");
+if (!link) return; // no nav link for this section — keep the current highlight
+Object.values(linkFor).forEach(function (l) { l.classList.remove("active"); });
+link.classList.add("active");
 });
 }, { rootMargin: "-45% 0px -50% 0px" });
 sections.forEach(function (s) { sectionObserver.observe(s); });
