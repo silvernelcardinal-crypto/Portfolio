@@ -109,7 +109,11 @@ signal: AbortSignal.timeout(20000)
 // 404/405 = no server function (e.g. Live Server); 500 = key not set up yet.
 // Stop trying the AI for this visit. 429 (busy) = just use the backup this time.
 if ([404, 405, 500, 501].includes(response.status)) aiAvailable = false;
-if (!response.ok) throw new Error("API error " + response.status);
+if (!response.ok) {
+const error = new Error("API error " + response.status);
+error.status = response.status;
+throw error;
+}
 const data = await response.json();
 if (!data.reply) throw new Error("Empty reply");
 return data.reply;
@@ -167,18 +171,23 @@ input.value = "";
 sendBtn.disabled = true;
 const typing = showTyping();
 let reply;
+let aiError = null;
 if (aiAvailable) {
 try {
 reply = await getAIReply(userText);
 setMode("✨ AI mode");
 } catch (error) {
+aiError = error;
 console.log("AI unavailable, using rule-based bot:", error.message);
 }
 }
 if (!reply) {
 await wait(500); // small pause so it feels natural
 reply = getReply(userText);
-setMode("⚡ Basic mode");
+// Say WHY we fell back — "busy" is very different from "not configured".
+if (aiError && aiError.status === 429) setMode("⏳ AI busy — basic mode");
+else if (aiError && aiError.status === 502) setMode("⚠️ AI error — basic mode");
+else setMode("⚡ Basic mode");
 }
 typing.remove();
 addMessage(reply, "bot");
