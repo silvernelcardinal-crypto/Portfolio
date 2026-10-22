@@ -171,6 +171,22 @@ learnings: [
 ],
 tools: ["Vercel", "OpenRouter", "JavaScript"],
 next: "Deploy the site and start writing the journal entries in Git."
+},
+{
+day: 9,
+date: "2026-10-22",
+title: "JavaScript Practice",
+focus: "Practising JavaScript exercises to improve my coding skills.",
+tasks: [
+"Completed exercises on variables, functions, arrays, and numbers and operators.",
+"Practised logging and debugging with Chrome Console.",
+],
+learnings: [
+"Logging is the first step to debugging — it shows what the code and console is doing.",
+"Understanding the difference between `let`, `const`, and `var` is crucial for variable management.",
+],
+tools: ["JavaScript", "Chrome DevTools"],
+next: "Continue practising JavaScript and start working on a small project."
 }
 ];
 
