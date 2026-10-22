@@ -34,6 +34,35 @@ if (-not (Test-Path $dataFile)) {
 # ---------- 1. Read the JS data file ----------
 $raw = [System.IO.File]::ReadAllText($dataFile)
 
+# Trailing commas are valid JavaScript but not valid JSON, so we remove them
+# before parsing. This walks the text and skips commas that sit right before a
+# closing ] or } — but never inside a string.
+function Remove-TrailingCommas([string]$Text) {
+  $sb = New-Object System.Text.StringBuilder
+  $inQuote = $false
+  $i = 0
+  $n = $Text.Length
+  while ($i -lt $n) {
+    $ch = $Text[$i]
+    if ($inQuote) {
+      [void]$sb.Append($ch)
+      if ($ch -eq '\') { $i++; if ($i -lt $n) { [void]$sb.Append($Text[$i]) }; $i++; continue }
+      if ($ch -eq '"') { $inQuote = $false }
+      $i++
+      continue
+    }
+    if ($ch -eq '"') { $inQuote = $true; [void]$sb.Append($ch); $i++; continue }
+    if ($ch -eq ',') {
+      $j = $i + 1
+      while ($j -lt $n -and ($Text[$j] -eq ' ' -or $Text[$j] -eq "`t" -or $Text[$j] -eq "`r" -or $Text[$j] -eq "`n")) { $j++ }
+      if ($j -lt $n -and ($Text[$j] -eq ']' -or $Text[$j] -eq '}')) { $i++; continue }
+    }
+    [void]$sb.Append($ch)
+    $i++
+  }
+  return $sb.ToString()
+}
+
 function Get-Literal {
   # Takes the text between the given markers, drops full-line // comments,
   # and returns the { ... } or [ ... ] literal inside it.
@@ -57,6 +86,8 @@ function Get-Literal {
   }
   # drop a trailing semicolon
   $clean = ($clean -replace ';\s*$', '').Trim()
+  # JavaScript allows trailing commas, JSON does not — remove them.
+  $clean = Remove-TrailingCommas $clean
   return $clean
 }
 
