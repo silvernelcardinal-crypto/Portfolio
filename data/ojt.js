@@ -187,6 +187,22 @@ learnings: [
 ],
 tools: ["JavaScript", "Chrome DevTools"],
 next: "Continue practising JavaScript and start working on a small project."
+},
+{
+day: 10, 
+date: "2026-10-23",
+title: "JavaScript Practice",
+focus: "Exploring and Practising JavaScript Exercises.",
+tasks: [
+"Continue Practising JavaScript variables, arrays, loops, and other operators.",
+"Practising debugging using Chrome and Console.",
+],
+learnings: [
+"Still continue practising javascript, and trying to understand and analyze different operators.",
+"Learning arrays, and loops and other operators.",
+],
+tools: ["JavaScript"],
+next: "Still continue practising and learning more about JavaScript."
 }
 ];
 
