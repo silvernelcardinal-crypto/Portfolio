@@ -219,7 +219,7 @@ learnings: [
 ],
 tools: ["JavaScript"],
 next: "Exploring and Practising more functions of JavaScript."
-},
+}
 ];
 
 // The Markdown filename used in the ojt-journal repo.
