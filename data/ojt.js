@@ -203,7 +203,23 @@ learnings: [
 ],
 tools: ["JavaScript"],
 next: "Still continue practising and learning more about JavaScript."
-}
+},
+{
+day: 11,
+date: "2026-10-26",
+title: "JavaScript Practice",
+focus: "Learning Arrays, Objects, Loops & Functions.",
+tasks: [
+"Day 2 of practising javascript, and learning more functions about javascript and trying to analyze it by my self.",
+"Understanding other javascript functions/operators.",
+],
+learnings: [
+"Just still continue practising and understanding other functions/operators of javascript.",
+"Practising arrays, object, and loops.",
+],
+tools: ["JavaScript"],
+next: "Exploring and Practising more functions of JavaScript."
+},
 ];
 
 // The Markdown filename used in the ojt-journal repo.
