@@ -219,6 +219,22 @@ learnings: [
 ],
 tools: ["JavaScript"],
 next: "Exploring and Practising more functions of JavaScript."
+},
+{
+day: 12,
+date: "2026-10-27",
+title: "JavaScript Practice",
+focus: "Learning Name tag, and Like counter.",
+tasks: [
+"Day 3 of practising javascript, and learning on how to use nametag and like counter.",
+"Trying to solve or understanding like counting and nametag.",
+],
+learnings: [
+"Continueing javascript practising and adding the nametag, and like counter to our knowledge.",
+"Learning Nametag, and Like counter."
+],
+tools: ["JavaScript"],
+next: "Learning more javascript functions/operators."
 }
 ];
 
