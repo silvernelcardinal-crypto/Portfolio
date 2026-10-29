@@ -251,6 +251,22 @@ learnings: [
 ],
 tools: ["JavaScript"],
 next: "Exploring and learn other functions of javascript."
+},
+{
+day: 14,
+date: "2026-10-29",
+title: "JavaScript Practice",
+focus: "Continuing Exercising and Practicing light on/oof and Live greeting",
+tasks: [
+"Still practicing Lighs on/off, Live counter, and Live greeting.",
+"Understanding JavaScript Functions/Operators.",
+],
+learnings: [
+"Exercising javascript practices and analyzing other js functions.",
+"Continue practicising lights on/off and live greeting."
+],
+tools: ["JavaScript"],
+next: "Still Continuing JavaScript more Functions/Operators."
 }
 ];
 
